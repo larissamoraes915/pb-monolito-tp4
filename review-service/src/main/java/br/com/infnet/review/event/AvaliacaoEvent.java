@@ -1,24 +1,18 @@
-package br.com.infnet.review.domain;
+package br.com.infnet.review.event;
 
-import jakarta.persistence.*;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "avaliacoes")
-public class Avaliacao {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AvaliacaoEvent implements Serializable {
     private Long id;
-
     private Long produtoId;
     private String autor;
     private Integer nota;
     private String comentario;
 
-    public Avaliacao() {
+    public AvaliacaoEvent() {
     }
 
-    public Avaliacao(Long id, Long produtoId, String autor, Integer nota, String comentario) {
+    public AvaliacaoEvent(Long id, Long produtoId, String autor, Integer nota, String comentario) {
         this.id = id;
         this.produtoId = produtoId;
         this.autor = autor;

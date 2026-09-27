@@ -1,4 +1,4 @@
-﻿package br.com.infnet.review;
+package br.com.infnet.review;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

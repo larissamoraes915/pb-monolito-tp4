@@ -49,7 +49,7 @@ class AvaliacaoControllerTest {
     @Test
     @DisplayName("Deve listar avaliacoes de um produto por ID via GET")
     void deveListarAvaliacoesPorProduto() throws Exception {
-        avaliacaoRepository.save(new Avaliacao(2L, "Carlos", "Muito bom", 4));
+        avaliacaoRepository.save(new Avaliacao(1L, 2L, "Carlos", 4, "Muito bom"));
 
         mockMvc.perform(get("/avaliacoes/produto/2"))
                 .andExpect(status().isOk())
